@@ -3,21 +3,24 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  List beauty = ["Skincare", "Haircare", "Makeup", "Fragrances"];
+List beauty = ["Skincare", "Haircare", "Makeup", "Fragrances"];
 
-  List ads = ["Gel Cream","Luseta hair collation"];
+List ads = ["Gel Cream","Luseta hair collation"];
 
   List<Color> bgColors = [
-    Color.fromARGB(206, 37, 144, 112),
-    Color.fromARGB(206, 246, 144, 163),
-    Color.fromARGB(206, 237, 190, 19),
-    Color.fromARGB(206, 128, 108, 185), ];
+    Color.fromARGB(255, 113, 183, 188),
+    Color.fromARGB(255, 254, 144, 166),
+    Color.fromARGB(255, 229, 206, 115),
+    Color.fromARGB(206, 128, 108, 185),
+    ];
 
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+    
   @override
   Widget build(BuildContext context) {
   return Material(
-  color: Color.fromARGB(230, 231, 224, 192),
+  color: Color.fromARGB(255, 255, 255, 255),
     child: SingleChildScrollView(
     child: Column(
     children: [
@@ -39,7 +42,7 @@ class HomeScreen extends StatelessWidget {
    Icon( Icons.location_on,
     color: Color.fromARGB(255, 113, 183, 188), ),
                           
-    Text( "Qatif",
+    Text( "Dhahran",
     style: TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold), ),
@@ -74,7 +77,7 @@ class HomeScreen extends StatelessWidget {
     ),
     ),
   
- SizedBox(height: 20,),
+ SizedBox(height: 10,),
 
   Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,7 +87,7 @@ class HomeScreen extends StatelessWidget {
     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
 
     decoration: BoxDecoration(
-    color: Color.fromARGB(255, 113, 183, 188),
+    color: Color.fromARGB(255, 255, 255, 255),
     borderRadius: BorderRadius.circular(10), ),
   child: Center(
    child: TextFormField(
@@ -116,7 +119,7 @@ Padding( padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
 
   child: ClipRRect(
   borderRadius: BorderRadius.circular(15),
-  child: Image.asset("assets/3.jpg"),
+  child: Image.asset("assets/add.png"),
   ),
   ),
 
@@ -210,7 +213,7 @@ child: Container(
     
     decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(10),
-    color: Color.fromARGB(230, 231, 224, 192),),
+    color: Color.fromARGB(255, 255, 255, 255),),
 
 child: Column( 
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -237,13 +240,13 @@ SizedBox( height: 6, ),
 
 Row(
 children: [
-Icon( Icons.star, size: 20, color: Color.fromARGB(255, 113, 183, 188), ),
+Icon( Icons.star, size: 20, color: Color.fromARGB(255, 238, 215, 10), ),
 
 Text( "4.5", style: TextStyle( fontWeight: FontWeight.bold), ),
 
 SizedBox( width: 6, ),
 
-Text("1000+ review", style:TextStyle(color: Colors.black54), ),
+Text("1000+ Sales", style:TextStyle(color: Colors.black54), ),
 ],
 ),
 ],
@@ -258,11 +261,9 @@ Container( padding: EdgeInsets.all(10),
 
 decoration: BoxDecoration(
   color: Color.fromARGB(255, 113, 183, 188),
-  borderRadius:
-  BorderRadius.circular(10)),
-
-child: Text( "SAR 75",
-style: TextStyle( fontSize: 14, color: Colors.white), ),
+  borderRadius: BorderRadius.circular(10)),
+child: Text( "SAR 45",
+style: TextStyle( fontSize: 15, color: Colors.black87), ),
 ),
 ],
 ),
@@ -280,6 +281,5 @@ style: TextStyle( fontSize: 14, color: Colors.white), ),
 ),
 ),
 );
-  }
 }
-
+}

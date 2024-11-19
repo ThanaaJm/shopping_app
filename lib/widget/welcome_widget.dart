@@ -10,8 +10,7 @@ class WelcomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 113, 183, 188),
-      
+      color: Color.fromARGB(255, 255, 255, 255),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -46,13 +45,13 @@ class WelcomeWidget extends StatelessWidget {
 
           InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen() ));
+              Navigator.push( context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
             },
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 60 ,vertical: 50 ),
               padding: EdgeInsets.symmetric(vertical: 15 ),
               decoration: BoxDecoration(
-                color:Color.fromARGB(230, 231, 224, 192), 
+                color: Color.fromARGB(255, 113, 183, 188), 
                 borderRadius: BorderRadius.circular(40) ,
                 boxShadow:[BoxShadow(
                   color: Colors.black,
